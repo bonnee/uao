@@ -83,7 +83,7 @@ public class PlayerScript : MonoBehaviour
 	void LateUpdate ()
 	{
 		altitude.text = "Alt: " + Mathf.Round (Vector3.Distance (rb.position,Vector3.zero)) + " m";
-		velocity.text = "Vel: " + Mathf.Round (rb.velocity.magnitude) + " m/s";
+		//velocity.text = "Vel: " + Mathf.Round (rb.velocity.magnitude) + " m/s";
 	}
 
 	static void AddRelativeForceAtPosition (Rigidbody2D body, Vector2 force, Vector2 position)
