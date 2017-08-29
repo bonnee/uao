@@ -21,6 +21,13 @@ public class PlayerCameraScript : MonoBehaviour
 	{
 		float zoom = (transform.position - target.transform.position).magnitude;
 
+		float delta = Input.GetAxis("Mouse ScrollWheel");
+
+		if (delta > 0)
+			zoom -= 10*delta;
+		if (delta < 0)
+			zoom += 10*delta;
+
 		transform.position = new Vector3 (target.transform.position.x, target.transform.position.y, -zoom);
 
 		transform.rotation = target.transform.rotation;
